@@ -1,0 +1,14 @@
+POST REQUEST
+http://httpbin.org/post
+
+GET REQUEST
+http://info.cern.ch/
+
+CONNECT REQUEST
+https://www.youtube.com/
+
+Chunked
+http://www.httpwatch.com/httpgallery/chunked/chunkedimage.aspx
+
+Max age
+http://www.artsci.utoronto.ca/futurestudents

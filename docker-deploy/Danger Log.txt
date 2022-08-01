@@ -1,0 +1,13 @@
+Danger log
+
+1. When a request is not GET, POST, CONNECT, we should stop the thread
+2. If the response is 4xx or 5xx, we should handle it correctly, for example delete it from cache, report to the client
+3. If the cache has private field, it should not be shared by every client.
+4. The source of the response might need to be verified, in case our proxy is being attacked by some malicious server..
+5. The expiration time of each response should be calculated carefully to prevent sending expired response to the client.
+6. The expiration of response in the cache might need to be calculated periodically to prevent that the cache is full of expired response.
+
+
+Exception guarantee:
+1. Our proxy can handle and parse various status code of request and response, for example, when the code is 206, we will not store in the cache. If the code is 4xx or 5xx, the client is notified as well.
+2. We could report whether there are incoming connections to the server, it not, the proxy will not execute accept operations.
